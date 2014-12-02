@@ -34,7 +34,7 @@ $(function(){
     $('.addButton').on('click',function(){
         buttonsArray.push({});
         var thisButtonNumber = buttonsArray.length;
-        var r= $('<button class=" idDay' + buttonsArray.length +'" type="button">Day ' + buttonsArray.length +'</button>');
+        var r= $('<button class="idDay' + buttonsArray.length +'" type="button">Day ' + buttonsArray.length +'</button>');
 
 
       var klon = $( '#this-plan1' );
@@ -45,12 +45,14 @@ $(function(){
 
         r.on('click', function(evt){
 
+          thisButtonIsBlue = evt.target.getAttribute("class").substring(5,6);
+           console.log(evt.target);
+          console.log(thisButtonIsBlue);
           r.siblings().removeClass('btn-primary');
           r.addClass('btn-primary');
-          $("#this-title" ).html('Day ' + thisButtonNumber);
+          $("#this-plan"+ thisButtonIsBlue+ " #this-title" ).html('Day ' + thisButtonIsBlue);
           $('.plans').hide();
           $('#this-plan'+thisButtonNumber).show();
-          thisButtonIsBlue = evt.target.getAttribute("class").substring(5,6);
 
      });
        $(r).appendTo('.btn-group');
@@ -63,7 +65,9 @@ $(function(){
 $('.idDay1').click(function(evt){
           $(this).siblings().removeClass('btn-primary');
           $(this).addClass('btn-primary');
-      $("#this-title" ).html('Day 1');
+      $("#this-plan1 #this-title" ).html('Day 1');
+          $('.plans').hide();
+          $('#this-plan1' ).show();
       thisButtonIsBlue = 1;
      });
 });
