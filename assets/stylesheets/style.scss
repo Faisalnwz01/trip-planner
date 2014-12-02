@@ -1,0 +1,60 @@
+body {
+	padding-top: 50px;
+}
+
+#content {
+	padding-bottom: 20px;
+}
+
+#days-container {
+	margin-top: 20px;
+}
+
+#map-canvas {
+	height: 400px;
+}
+
+#hotels, #things-to-do, #restaurants {
+	> select {
+		width: 78%;
+		float: left;
+	}
+	> button {
+		float: right;
+	}
+}
+
+#this-hotel, #these-things-to-do, #these-restaurants {
+	.remove, .day-item {
+		padding: 5px 0 5px 0;
+	}
+
+	.remove {
+		text-align: right;
+		padding-right: 12px;
+		padding-left: 3px;
+	}
+	.day-item {
+		text-align: left;
+		padding-left: 12px;
+		padding-right: 3px;
+	}
+}
+
+select {
+	font-size: 24px;
+}
+
+#this-day {
+	padding: 5px;
+	border: 1px solid #428bca;
+	border-radius: 4px;
+	> .remove {
+		margin-left: 6px;
+		text-align: bottom;
+	}
+}
+
+#this-title {
+	color: #428bca;
+}

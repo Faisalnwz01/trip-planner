@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/stylesheets/style.css">
+
+		<script>
+		{% autoescape false %}
+			var all_hotels = {{ hotels | json }};
+			// var all_hotels = ["me", "you"];
+			var all_restaurants = {{ restaurants | json }};
+			var all_things_to_do = {{ things_to_do | json }};
+		{% endautoescape %}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfh6b7yuobvM7GYsQfM3GfFQiYXHPLKII&sensor=true"></script>
+		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="/javascripts/main.js"></script>
+	</head>
+	<body>
+		{% include '_navbar.html' %}
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>

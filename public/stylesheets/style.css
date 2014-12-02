@@ -1,0 +1,42 @@
+body {
+  padding-top: 50px; }
+
+#content {
+  padding-bottom: 20px; }
+
+#days-container {
+  margin-top: 20px; }
+
+#map-canvas {
+  height: 400px; }
+
+#hotels > select, #things-to-do > select, #restaurants > select {
+  width: 78%;
+  float: left; }
+#hotels > button, #things-to-do > button, #restaurants > button {
+  float: right; }
+
+#this-hotel .remove, #this-hotel .day-item, #these-things-to-do .remove, #these-things-to-do .day-item, #these-restaurants .remove, #these-restaurants .day-item {
+  padding: 5px 0 5px 0; }
+#this-hotel .remove, #these-things-to-do .remove, #these-restaurants .remove {
+  text-align: right;
+  padding-right: 12px;
+  padding-left: 3px; }
+#this-hotel .day-item, #these-things-to-do .day-item, #these-restaurants .day-item {
+  text-align: left;
+  padding-left: 12px;
+  padding-right: 3px; }
+
+select {
+  font-size: 24px; }
+
+#this-day {
+  padding: 5px;
+  border: 1px solid #428bca;
+  border-radius: 4px; }
+  #this-day > .remove {
+    margin-left: 6px;
+    text-align: bottom; }
+
+#this-title {
+  color: #428bca; }

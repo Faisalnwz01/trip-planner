@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div id="content">
+    <div id="days-container" class="col-md-3">
+        {% include '_days.html' %}
+    </div>
+    <div class="col-md-9">
+        <div class="row">
+            {% include '_choose.html' %}
+        </div>
+        <div id="map-canvas"></div>
+    </div>
+</div>
+
+{% endblock %}
